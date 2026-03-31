@@ -43,7 +43,7 @@ document.querySelector(".prev").addEventListener("click", () => {
 setInterval(() => {
     indexCarrossel = (indexCarrossel + 1) % total;
     mostrarImagem(indexCarrossel);
-}, 6000); // troca a cada 4 segundos
+}, 6000); // troca a cada 6 segundos
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -86,3 +86,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+/* Header some ao descer e reaparece ao subir */
+let lastScroll = 0;
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+    let currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll) {
+        // 🔽 descendo
+        header.classList.add("esconder");
+    } else {
+        // 🔼 subindo
+        header.classList.remove("esconder");
+    }
+
+    lastScroll = currentScroll;
+});

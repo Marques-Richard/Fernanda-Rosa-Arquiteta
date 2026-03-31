@@ -6,13 +6,25 @@ html {
 header {
     background: linear-gradient(#ccbfaf, #ccbfaf, #ebe6e0);
     color: #fff;
-    padding: auto;
+    padding: 10px 25px 10px 25px;
     position: fixed;
     width: 100%;
     margin: 0;
     text-align: center;
-    z-index: 1;
-     
+    z-index: 1;     
+}
+
+header {
+    
+    top: 0;
+    
+    transition: 0.4s ease;
+    z-index: 1000;
+}
+
+/* quando esconder */
+header.esconder {
+    transform: translateY(-100%);
 }
 
 
@@ -61,7 +73,7 @@ a {
     font-weight: bold;
 }
 
-.cabecalhp h1 {
+.cabecalho h1 {
     font-family: "Josefin Sans", sans-serif;
 }
 
@@ -342,7 +354,7 @@ font-family: "Courier Prime", monospace;
 
 .footer-texto h1 {
     font-size: 2em;
-    font-family: "Poppins", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 .footer-texto p {
